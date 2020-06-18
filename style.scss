@@ -1,0 +1,41 @@
+$label-width: 150px;
+
+body {
+    background-color: #eee;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.control {
+    display: flex;
+
+    @media (max-width: 640px) {
+        display: block;
+    }
+    
+    .control_label {
+        width: $label-width;
+    }
+    
+    .control_body {
+        flex-grow: 2;
+
+        input {
+            width: 100%;
+        }
+    }
+}
+
+.control_buttons {
+    margin-top: 20px;
+    margin-left: $label-width;
+
+    @media (max-width: 640px) {
+        margin-left: 0;
+    }
+}
